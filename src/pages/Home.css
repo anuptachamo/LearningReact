@@ -1,0 +1,7 @@
+p{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    padding: 20px;
+    margin: 5px;
+  }
