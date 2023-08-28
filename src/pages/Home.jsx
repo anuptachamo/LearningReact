@@ -1,10 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../components/Button'
 import Navbar from '../components/Navbar'
-import './Home.css'
+
+// Import the Home.css file from the styles folder
+import '../styles/Home.css' 
+
 
 const Home = () => {
+
+//  const [number, setNumber] = useState(0)
+
+//  function increase(){
+//   setNumber(number +1)
+//  }
+
+//  function decrease(){
+//   setNumber(number - 1)
+//  }
+
+
   return (
+    <>
+
+    {/* useState example */}
+    {/* <div>
+    <h1>{number}</h1>
+    <button onClick={increase}>+</button>
+    <button onClick={decrease}>-</button>
+    </div> */}
     <div>
         
     <Navbar/>
@@ -14,8 +37,15 @@ const Home = () => {
       Odio nobis cum natus praesentium assumenda nihil, itaque fuga tempore commodi! Harum commodi laboriosam iste error, distinctio aut quasi quas tenetur. Autem, repudiandae sit fugiat odio soluta pariatur perspiciatis iste.
       Delectus consectetur, nihil distinctio voluptatibus, saepe possimus recusandae, inventore quas sed ducimus error doloremque laboriosam molestiae in. Consequatur, nemo aut mollitia unde suscipit dolore dicta asperiores? Placeat ipsa ad quam.
       </p>
-      <Button text="Learn more"/>
+      <hr />
+     
+      <div className="button-group">
+        <Button text="Learn more" to ="/learnmore" />
+        <Button text="Click me" />
+      </div>
     </div>
+    </>
+
   )
 }
 

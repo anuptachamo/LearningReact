@@ -1,9 +1,12 @@
 // import React from 'react'
-import './Button.css';
-const Button = ({text}) => {
+import { Link } from 'react-router-dom';
+import '../styles/Button.css';
+const Button = ({text, to}) => {
   return (
     <>
-    <button className='btn'>{text}</button>
+    <Link to = {to}className='btn'>
+      {text}
+    </Link>
     </>
   )
 }
