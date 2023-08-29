@@ -12,17 +12,15 @@ const AllBlogs = () => {
     const response = await axios.get("https://64ee09441f872182714236fa.mockapi.io/blogs/")
     if(response.status == 200){
       console.log(response.data)
-
-    setBlogs(response.data)
-  
-    useEffect(()=>{
-      fetchBlogs()
-     
-    },[])
+      setBlogs(response.data) 
+    }
   }
 
+  useEffect(()=>{
+    fetchBlogs()
+   
+  },[])
 
-  }
   return (
     <>
     <Navbar/>
@@ -41,7 +39,7 @@ const AllBlogs = () => {
                 <img src={blog.avatar} alt="Avatar"  width='100%' />
                   <div className="container">
                     <h4><b>{blog.title}</b></h4> 
-                    <p style={{color:"red"}}>{blog.description}</p> 
+                    <p style={{color:"red"}}>{blog.Description}</p> 
                     <p>{blog.createdAt}</p>
                   </div>
               </div>
