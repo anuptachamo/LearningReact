@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
+// import About from './pages/About'
 import Contact from './pages/Contact'
 import Learnmore from './pages/Learnmore'
 
@@ -23,13 +23,14 @@ function App() {
             {/* <Route path='/about' element={<About/>}/> */}
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/learnmore' element={<Learnmore/>}/>
+            <Route path='/addblogs' element={<CreateBlogs/>}/>
 
 
 
             <Route path='/allblogs' element={<AllBlogs/>}/>
-            <Route path='/singleBlogs' element={<SingleBlogs/>}/>
-            <Route path='/createBlogs' element={<CreateBlogs/>}/>
-            <Route path='/editBlogs' element={<EditBlogs/>}/>
+            <Route path='/singleBlogs/:id' element={<SingleBlogs/>}/>
+            {/* <Route path='/createBlogs' element={<CreateBlogs/>}/> */}
+            <Route path='/editBlogs/:id' element={<EditBlogs/>}/>
 
         </Routes>
       </BrowserRouter>

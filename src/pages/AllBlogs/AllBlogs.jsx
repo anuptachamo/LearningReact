@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Navbar'
 import './../../styles/AllBlogs.css'
 import axios from "axios"
+import Button from './../../components/Button'
+import { useNavigate } from 'react-router-dom'
+
 
 
 
 const AllBlogs = () => {
+  const navigate = useNavigate()
   const [blogs,setBlogs] = useState([])
 
   const fetchBlogs = async()=>{
@@ -27,7 +31,9 @@ const AllBlogs = () => {
     <div>
       <h1>My Blogs</h1>
     </div>
-
+    <div className="button-group">
+        <Button className= 'addblogsbtn' text="Add Blogs" to ="/addblogs" />
+      </div>
     <div style={{display:'flex',justifyContent:"space-evenly",flexWrap:'wrap'}}>
         {
           blogs.map((blog)=>{
@@ -39,6 +45,7 @@ const AllBlogs = () => {
                     <p className='card-description'>{blog.Description}</p> 
                     <p className="card-date">{blog.createdAt}</p>
                   </div>
+                  <p onClick={()=>navigate("/singleBlogs/" + blog.id)} style={{textAlign:"center", color: "white", cursor: "pointer"}}>See More</p>
               </div>
             )
           })

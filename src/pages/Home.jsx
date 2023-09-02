@@ -41,7 +41,6 @@ const Home = () => {
      
       <div className="button-group">
         <Button text="Learn more" to ="/learnmore" />
-        <Button text="Click me" />
       </div>
     </div>
     </>
